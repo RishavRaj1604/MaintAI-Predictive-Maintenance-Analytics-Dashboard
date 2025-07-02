@@ -24,7 +24,16 @@ if uploaded_file is not None:
     
     # Drop same low variance columns (use list from earlier step)
     low_var_cols = ['sensor_measurement_1', 'sensor_measurement_5', 'sensor_measurement_10', 'sensor_measurement_16', 'sensor_measurement_18', 'sensor_measurement_19']
-    df.drop(columns=low_var_cols, inplace=True)
+    # Optional: Drop low variance or irrelevant columns (only if they exist in this dataset)
+low_var_cols = ['sensor_measurement_1', 'sensor_measurement_5', 'sensor_measurement_10',
+                'sensor_measurement_16', 'sensor_measurement_18', 'sensor_measurement_19']
+
+# Filter only columns that exist in the uploaded file
+low_var_cols = [col for col in low_var_cols if col in df.columns]
+
+# Safe drop (avoids KeyError)
+df.drop(columns=low_var_cols, inplace=True)
+
     
     # Normalize features (same scaler used during training)
     features = ['operational_setting_1', 'operational_setting_2', 'operational_setting_3'] + \
