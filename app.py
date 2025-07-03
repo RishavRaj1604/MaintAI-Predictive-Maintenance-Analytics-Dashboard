@@ -22,7 +22,7 @@ st.markdown("""
     }
 
     [data-testid="stAppViewContainer"] {
-        background-image: url("https://i.imgur.com/qG4pZcC.jpg");
+        background-image: url("https://images.unsplash.com/photo-1581091012184-7f2c5c7b56c4?fit=crop&w=1600&q=80");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
