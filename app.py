@@ -173,4 +173,4 @@ if uploaded_file is not None:
         st.stop()
 
 # Footer
-st.markdown("<div class='footer'>© 2025 MaintAI Project | Group 18 – UI Revamped by ChatGPT 🤝</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>© 2025 MaintAI Project | Group 18 </div>", unsafe_allow_html=True)
